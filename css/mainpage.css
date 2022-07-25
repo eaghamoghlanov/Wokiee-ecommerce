@@ -1,0 +1,2475 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: font1;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Widgets */
+.fwidget {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 5;
+}
+
+.fwidget img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Widgets */
+
+/* Pop up start */
+
+.popUp {
+    background-image: linear-gradient(180deg, blue, purple 70%);
+    opacity: 0.7;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.popUp .button{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    border: none;
+    color: white;
+    width: 54px;
+    height: 54px;
+    line-height: 54px;
+    text-decoration: none;
+    text-align: center;
+    background: none;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popUp p:nth-child(2) {
+    font-size: 36px;
+    color: #ffec54;
+    font-weight: bold;
+    display: flex;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 440px;
+}
+
+.popUp p:nth-child(3) {
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    position: absolute;
+    top: 37%;
+    text-align: center;
+    width: 900px;
+    font-weight: bolder;
+    line-height: 80px;
+    font-family: "font1";
+}
+
+.popUp p:nth-child(4) {
+    font-size: 24px;
+    color: #ffec54;
+    font-weight: medium;
+    display: flex;
+    position: absolute;
+    top: 65%;
+    text-align: center;
+    line-height: 80px;
+    font-family: "font1";
+}
+
+.popUp a:nth-child(5) {
+    font-size: 18px;
+    color: white;
+    font-weight: medium;
+    display: flex;
+    position: absolute;
+    top: 78%;
+    text-align: center;
+    line-height: 80px;
+    font-family: "font1";
+    padding: 4px 37px;
+    background-color: rgb(6, 6, 231);
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px black;
+    transition: all 0.3s ease-in-out;
+}
+
+.popUp a:nth-child(5):hover{
+transition: all 0.3s ease-in-out;
+filter: brightness(2);
+}
+
+.popUp img{
+    position: absolute;
+    display: flex;
+    top: 5%;
+    width: 100px;
+}
+
+.popUp img:nth-child(7){
+    position: absolute;
+    display: flex;
+    top: 9%;
+    left: 45.7%;
+    width: 85px;
+    animation-name: throttle;
+    animation-duration:3ms;
+    animation-delay:200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes throttle{
+    0%   {transform: rotate(-2deg);}
+    20%  {transform: rotate(2deg);}
+    40%  {transform: rotate(-2deg);}
+    60%  {transform: rotate(2deg) scaleY(1.04);}
+    80%  {transform: rotate(-2deg) scaleY(0.92);}
+    100% {transform: rotate(2deg);}
+}
+
+/* Pop up end */
+
+/* Header start */
+#header {
+    height: 50px;
+    position: relative;
+}
+
+#header.sticky {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    animation-name: swipe;
+    animation-duration: 300ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: 5;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+@keyframes swipe {
+    from {
+        top: -100%;
+    }
+
+    to {
+        top: 0%;
+    }
+}
+
+.container {
+    width: 81%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+}
+
+/* Logo properties start */
+.logo {
+    width: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo properties end */
+
+/* Navigation bar start */
+.navigationBar {
+    width: 70%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.navigationBar ul li {
+    display: inline-block;
+    margin: 0px 13px;
+}
+
+
+.navigationBar ul li:nth-child(1) a {
+    color: #2879fe;
+    font-size: 14px;
+}
+
+.navigationBar ul li a {
+    color: black;
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navigationBar ul li a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropDownContent {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    width: 49%;
+    margin-top: 5px;
+    background-color: white;
+    z-index: 5;
+
+
+}
+
+.col1 {
+    margin: 5px;
+}
+
+.col2 {
+    margin: 5px;
+}
+
+.col3 {
+    margin: 5px;
+}
+
+.col4 {
+    margin: 5px;
+}
+
+.navigationBar ul :hover .dropDownContent {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.dropDownContent .container1 {
+    margin: auto;
+    position: absolute;
+    display: flex;
+    background-color: white;
+    padding: 10px 10px;
+    width: auto;
+    height: auto;
+
+}
+
+/* col1 start */
+.dropDownContent .col1 {
+    display: flex;
+
+}
+
+.dropDownContent .col1 li {
+    display: flex;
+}
+
+.dropDownContent .col1 span {
+    display: flex;
+    color: white;
+    font-size: small;
+}
+
+.dropDownContent .col1 h5 {
+    padding-bottom: 5px;
+    padding-top: 30px;
+    display: flex;
+    padding-left: 14px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    font-size: 15px;
+}
+
+.dropDownContent .col1 h5:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigationBar ul li .dropDownContent .container1 .col1 a {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigationBar ul li .dropDownContent .container1 .col1 a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.col1 ul li a {
+    color: black;
+}
+
+/* col1 end */
+
+/* col2 start */
+
+.dropDownContent .col2 {
+    display: flex;
+}
+
+.navigationBar ul li .dropDownContent .container1 .col2 a {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropDownContent .col2 li {
+    display: flex;
+}
+
+.dropDownContent .col2 h5 {
+    padding-bottom: 5px;
+    padding-top: 30px;
+    display: flex;
+    padding-left: 14px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    font-size: 15px;
+}
+
+.dropDownContent .col2 h5:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigationBar ul li .dropDownContent .container1 .col2 a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+/* col2 end */
+
+/* col3 start */
+.dropDownContent .col3 {
+    display: flex;
+}
+
+.navigationBar ul li .dropDownContent .container1 .col3 a {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropDownContent .col3 li {
+    display: flex;
+}
+
+.dropDownContent .col3 h5 {
+    padding-bottom: 5px;
+    padding-top: 30px;
+    display: flex;
+    padding-left: 14px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    font-size: 15px;
+}
+
+.dropDownContent .col3 h5:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.navigationBar ul li .dropDownContent .container1 .col3 a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+/* col3 end */
+
+/* col4 start */
+.dropDownContent .col4 {
+    display: flex;
+}
+
+.navigationBar ul li .dropDownContent .container1 .col4 a {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropDownContent .col4 li {
+    display: flex;
+}
+
+.dropDownContent .col4 h5 {
+    padding-bottom: 5px;
+    padding-top: 30px;
+    display: flex;
+    padding-left: 14px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    font-size: 15px;
+}
+
+.dropDownContent .col4 h5:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.navigationBar ul li .dropDownContent .container1 .col4 a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+/* col4 end */
+
+/* Navigation bar end */
+
+/* Search bar start */
+.searchBar {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBar i {
+    color: black;
+    display: inline-block;
+    margin: 0px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.searchBar i:hover {
+    color: #2879fe;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Search bar end */
+
+/* Header end */
+
+/* Slider start */
+#owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#owl-demo .item video {
+    display: block;
+    width: 100%;
+    height: 10%;
+}
+
+.owl-dots {
+    position: absolute;
+    top: 550px;
+    left: 50%;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    position: absolute;
+}
+
+.owl-nav .owl-next {
+    left: 710px;
+}
+
+.owl-nav .owl-next span {
+    font-size: 80px;
+    opacity: 0.2;
+    color: gray;
+}
+
+.owl-nav .owl-prev {
+    right: 710px;
+}
+
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+    background: none !important;
+    outline: none !important;
+}
+
+.owl-nav .owl-prev span:hover,
+.owl-nav .owl-next span:hover {
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.owl-nav .owl-prev span {
+    font-size: 80px;
+    opacity: 0.2;
+    color: gray;
+    transition: all 0.2s ease-in-out;
+}
+
+.textContainer {
+    position: absolute;
+    top: 30%;
+    left: 36%;
+    text-align: center;
+    width: 450px;
+}
+
+.item:nth-child(1) h2:nth-child(1) {
+    color: #2879fe;
+}
+
+#owl-demo .item h2 {
+    font-size: 36px;
+}
+
+#owl-demo .item h1 {
+    font-size: 70px;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+#owl-demo .item span {
+    font-size: 14px;
+}
+
+#owl-demo .item a {
+    background-color: #2879fe;
+    padding: 15px 60px;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+#owl-demo .item a:hover {
+    background-color: white;
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Slider end */
+
+/* Under slider start */
+.underSlider {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 97%;
+    margin: auto;
+    position: relative;
+}
+
+.underSlider a {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 13px 40px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    color: black;
+
+}
+
+
+.sale {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sale:hover a {
+    color: white;
+    font-weight: bold;
+    background: rgba(40, 121, 254, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.sale img {
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: auto;
+}
+
+.sale:hover img {
+    transform: scale(1.1);
+}
+
+.new {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.new:hover a {
+    color: white;
+    font-weight: bold;
+    background: rgba(40, 121, 254, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.new img {
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: auto;
+}
+
+.new:hover img {
+    transform: scale(1.1);
+}
+
+.women {
+    grid-row: 1/4;
+    grid-column: 2/3;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.women:hover a {
+    color: white;
+    font-weight: bold;
+    background: rgba(40, 121, 254, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.women img {
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: auto;
+}
+
+.women:hover img {
+    transform: scale(1.1);
+}
+
+.men {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.men:hover a {
+    color: white;
+    font-weight: bold;
+    background: rgba(40, 121, 254, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.men img {
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: auto;
+}
+
+.men:hover img {
+    transform: scale(1.1);
+}
+
+.accessories {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.accessories:hover a {
+    color: white;
+    font-weight: bold;
+    background: rgba(40, 121, 254, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.accessories img {
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: auto;
+}
+
+.accessories:hover img {
+    transform: scale(1.1);
+}
+
+.shoes {
+    grid-column: 3/5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.shoes:hover a {
+    color: white;
+    font-weight: bold;
+    background: rgba(40, 121, 254, 0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+.shoes img {
+    transition: all 0.5s ease-in-out;
+    height: 100%;
+    width: auto;
+}
+
+.shoes:hover img {
+    transform: scale(1.1);
+}
+
+/* Under slider end */
+
+/* Best seller start */
+
+#bestseller a:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+
+}
+
+#bestseller a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+#bestseller p {
+    text-align: center;
+    font: 16px;
+    font-weight: bold;
+}
+
+.bsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+.bsContainer a {
+    position: absolute;
+    color: black;
+    font-size: 12px;
+
+}
+
+.bs1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs1:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs1 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs1 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs1 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs1 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs1 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs1 a:nth-child(2) {
+    font-size: 12px;
+    background-color: #2879fe;
+    color: white;
+    top: 5px;
+    left: 5px;
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+.bs11 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+}
+
+#bestseller .bsContainer .bs11 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+.bs11 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+#bestseller .bsContainer .bs11 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs11 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs11 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+.small {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 1px;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    padding-top: 100px;
+}
+
+.small img {
+    height: 52px;
+    width: 42px;
+    border-radius: 5px;
+    transition: all 0.1s ease-in-out;
+    border: 0px solid #2879fe;
+}
+
+.small img:hover {
+    border: 2px solid #2879fe;
+    transition: all 0.1s ease-in-out;
+}
+
+.bs2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs2:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs2 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs2 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs2 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs2 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs2 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs22 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+}
+
+#bestseller .bsContainer .bs22 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#bestseller .bsContainer .bs22 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs22 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs22 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+.bs22 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+
+.bs3 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs3:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs3 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs3 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs3 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs3 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs3 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs33 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    position: relative;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs33 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#bestseller .bsContainer .bs33 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs33 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs33 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+.bs33 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+.bs4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs4:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs4 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs4 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs4 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs4 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs4 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs4 a:nth-child(2) {
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    top: 5px;
+    left: 5px;
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+.bs44 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+}
+
+#bestseller .bsContainer .bs44 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#bestseller .bsContainer .bs44 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs44 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs44 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+.bs44 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+#bestseller .bsContainer .bs4 a {
+    font-size: 12px;
+    color: white;
+    background-color: red;
+    top: 5px;
+    left: 5px;
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+.bs5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs5:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs5 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs5 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs5 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs5 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs5 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs55 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+}
+
+#bestseller .bsContainer .bs55 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#bestseller .bsContainer .bs55 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs55 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs55 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+.bs55 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+.bs55 p:nth-child(1n+9) {
+    font-size: 14px;
+    color: grey;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: left;
+
+}
+
+.bs6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs6:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs6 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs6 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs6 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs6 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs6 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs66 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+}
+
+#bestseller .bsContainer .bs66 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#bestseller .bsContainer .bs66 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs66 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs66 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+.bs66 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+
+.bs7 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs7:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs7 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs7 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs7 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs7 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs7 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs77 {
+    grid-column: 3/4;
+    grid-row: 4/5;
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+}
+
+#bestseller .bsContainer .bs77 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#bestseller .bsContainer .bs77 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs77 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs77 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+.bs77 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+.bs8 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+.bs8:hover .icons {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs8 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#bestseller .bsContainer .bs8 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#bestseller .bsContainer .bs8 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs8 i {
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    color: black;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs8 i:hover {
+    background-color: #2879fe;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.bs88 {
+    grid-column: 4/5;
+    grid-row: 4/5;
+    position: relative;
+    display: flex;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+}
+
+#bestseller .bsContainer .bs88 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#bestseller .bsContainer .bs88 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#bestseller .bsContainer .bs88 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.bs88 i {
+    padding-top: 20px;
+    color: gold;
+    font-size: small;
+    margin: 3px;
+}
+
+.bs88 p {
+    display: block;
+    position: absolute;
+    padding-top: 60px;
+}
+
+.bsContainer img {
+    cursor: pointer;
+}
+
+/* Best seller end */
+
+/* Arrivals start */
+.arrivalsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 97%;
+    margin: auto;
+    position: relative;
+}
+
+.arrivals {
+    overflow: hidden;
+    position: relative;
+}
+
+.arrivals img {
+    transition: all 0.6s ease-in-out;
+}
+
+.arrivals :hover img {
+    transform: scale(1.1);
+    transition: all 0.6s ease-in-out;
+}
+
+.arrivals:hover+.info {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.info {
+    position: absolute;
+    display: block;
+    top: 40%;
+    left: 25%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.info span {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.info p {
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Arrivals end */
+
+/* Trending start */
+
+#trending a:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+
+}
+
+#trending a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+
+}
+
+
+#trending p {
+    text-align: center;
+    font: 16px;
+    font-weight: bold;
+}
+
+
+#trending .bsContainer .bs1 a {
+    font-size: 12px;
+    color: white;
+    top: 5px;
+    left: 5px;
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+#trending .bsContainer .bs1 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs1 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs1 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs2 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs2 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs2 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs3 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs3 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs3 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs4 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs4 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs4 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs5 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs5 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs5 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs6 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs6 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs6 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs7 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs7 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs7 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#trending .bsContainer .bs8 .icons a:nth-child(1) {
+    left: 80%;
+    top: 5%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs8 .icons a:nth-child(2) {
+    left: 80%;
+    top: 20%;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+#trending .bsContainer .bs8 .icons a:nth-child(3) {
+    left: 80%;
+    top: 35%;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs11 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs11 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs11 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs22 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs22 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs22 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs33 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs33 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs33 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs44 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs44 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs44 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs55 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs55 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs55 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs6 a {
+    font-size: 12px;
+    color: white;
+    background-color: red;
+    top: 5px;
+    left: 5px;
+    padding: 1px 2px;
+    border-radius: 2px;
+}
+
+#trending .bsContainer .bs66 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs66 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs66 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs77 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs77 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs77 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+#trending .bsContainer .bs88 a:nth-child(1) {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    color: grey;
+}
+
+#trending .bsContainer .bs88 a:nth-child(1n+2) {
+    display: block;
+    padding-top: 40px;
+    position: absolute;
+    font-size: 14px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    font-weight: 200;
+}
+
+#trending .bsContainer .bs88 a:nth-child(1n+2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Trending end */
+
+/* Latest start */
+
+.latestpic {
+    position: relative;
+    justify-content: center;
+}
+
+.latestpic .card {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 85%;
+    left: 6%;
+    position: absolute;
+    border: solid;
+    border-radius: 6px;
+    border-color: white;
+    top: 200px;
+    height: 200px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.latestpic:hover .card {
+    transform: scale(1.08);
+    transition: all 0.3s ease-in-out;
+}
+
+.card a:nth-child(1) {
+    font-size: 14px;
+    color: #2879fe;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    position: absolute;
+    top: 20px;
+}
+
+.card a:nth-child(1):hover {
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.card a:nth-child(2) {
+    font-size: 20px;
+    color: black;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+}
+
+#latest .latestContainer .latestpic .card p:nth-child(3) {
+    font-size: 14px;
+    color: grey;
+    font-weight: lighter;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 90px;
+
+}
+
+.card p:nth-child(4) {
+    font-size: 14px;
+    color: grey;
+    font-weight: lighter;
+    top: 140px;
+    position: absolute;
+    display: flex;
+
+}
+
+#latest a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+#latest a:nth-child(2):hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.latestpic .card p:nth-child(4) {
+    display: flex;
+}
+
+.latestpic .card a:nth-child(5) {
+    display: flex;
+    position: absolute;
+    top: 141px;
+    left: 270px;
+    color: grey;
+    font-weight: light;
+    transition: all 0.3s ease-in-out;
+}
+
+.latestpic .card a:nth-child(5):hover {
+    transition: all 0.3s ease-in-out;
+    color: #2879fe;
+}
+
+.latestpic .card i {
+    font-size: 13px;
+
+}
+
+
+#latest p:nth-child(3) {
+    font: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.latestContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+/* Latest end */
+/* Follow us on instagram start */
+#followUs {
+    height: 60vh;
+}
+
+#followUs h2 {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+#followUs p {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.box {
+    display: flex;
+}
+
+.box .img {
+    display: flex;
+    width: 253px;
+    position: relative;
+    justify-content: center;
+}
+
+
+.box .img a {
+    position: absolute;
+    width: 100%;
+}
+
+.box .img a img {
+    position: absolute;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.box .img:hover img{
+    -webkit-filter: brightness(50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.box .img i {
+    position: absolute;
+    display: flex;
+    top: 126px;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.box .img:hover i {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Follow us on instagram end */
+
+/* underBar container start */
+
+#underbarContainer {
+    width: 80%;
+    margin: auto;
+    height: 15vh;
+    display: flex;
+    background-color: #fff;
+}
+
+.bar {
+    width: 33%;
+    display: flex;
+}
+
+.bar .txt h4 {
+    transition: all 0.3s ease-in-out;
+    color: black;
+    cursor: pointer;
+}
+
+.bar .txt p {
+    font-size: 14px;
+    color: #777;
+}
+
+.bar .txt h4:hover {
+    transition: all 0.3s ease-in-out;
+    color: #2879fe;
+}
+
+.bar .icn {
+    margin: 0px 20px;
+}
+
+.bar .icn i {
+    color: #2879fe;
+    top: 2px;
+
+}
+
+/* underBar container end */
+
+/* Footer start */
+
+/* Footer line start */
+#footerLine {
+    height: 10vh;
+    background-color: #2879fe;
+}
+
+.footerContainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.beInTouch {
+    width: 25%;
+    position: relative;
+}
+
+.beInTouch h4 {
+    position: absolute;
+    top: 25px;
+    color: white;
+}
+
+.joinUs {
+    position: relative;
+    width: 50%;
+}
+
+.joinUs input:nth-child(1) {
+    position: absolute;
+    display: flex;
+    top: 15px;
+    border: solid white;
+    width: 507px;
+    height: 40px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.joinUs input:nth-child(2) {
+    position: absolute;
+    display: flex;
+    top: 15px;
+    left: 505px;
+    border: solid #303030;
+    background-color: #303030;
+    color: white;
+    height: 40px;
+    width: 87px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.joinUs input:nth-child(2):hover {
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+    cursor: pointer;
+}
+
+.social {
+    display: flex;
+    width: 23%;
+    position: relative;
+    justify-content: right;
+}
+
+.social a {
+    display: flex;
+    margin: 10px;
+    color: white;
+    padding-top: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.social a:hover {
+    color: #303030;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer line end */
+
+/* Footer categories start */
+
+#footerCategories {
+    height: 50vh;
+}
+
+.footerCategoriesContainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.col {
+    width: 24%;
+    margin: 5px;
+}
+
+.col a {
+    color: #777;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.col a:hover {
+    color: #2879fe;
+    transition: all 0.3s ease-in-out;
+}
+
+.col p {
+    color: #777;
+    font-size: 14px;
+}
+
+.col span {
+    font-size: 14px;
+    color: black;
+}
+
+
+/* Footer categories end */
+
+/* Footer bottom start */
+#footerBottom {
+    height: 10vh;
+}
+
+.footerBottomContainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+
+.bottomLeft {
+    width: 50%;
+    position: relative;
+}
+
+.bottomLeft a {
+    padding-top: 17px;
+}
+
+.bottomLeft p {
+    font-size: 14px;
+    color: #888;
+    display: inline-block;
+    padding-top: 25px;
+}
+
+.bottomRight {
+    position: relative;
+    width: 49%;
+}
+
+.bottomRight a {
+    padding-top: 5px;
+    float: right;
+    margin: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.bottomRight a:hover {
+    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Footer bottom end */
+/* Footer end */
