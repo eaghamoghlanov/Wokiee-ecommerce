@@ -31,19 +31,16 @@ li {
 /* Pop up start */
 
 .popUp {
-    display: none;
-    justify-content: center;
     background-image: linear-gradient(180deg, blue, purple 70%);
-    opacity: 0.9;
-    z-index: 100;
-    position: fixed;
+    opacity: 0.7;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
     height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
 }
 
-.popUp .button {
+.popUp .button{
     position: absolute;
     top: 10%;
     left: 70%;
@@ -114,56 +111,39 @@ li {
     transition: all 0.3s ease-in-out;
 }
 
-.popUp a:nth-child(5):hover {
-    transition: all 0.3s ease-in-out;
-    filter: brightness(2);
+.popUp a:nth-child(5):hover{
+transition: all 0.3s ease-in-out;
+filter: brightness(2);
 }
 
-.popUp img {
+.popUp img{
     position: absolute;
     display: flex;
     top: 5%;
     width: 100px;
 }
 
-.popUp img:nth-child(7) {
+.popUp img:nth-child(7){
     position: absolute;
     display: flex;
     top: 9%;
     left: 45.7%;
     width: 85px;
     animation-name: throttle;
-    animation-duration: 3ms;
-    animation-delay: 200ms;
+    animation-duration:3ms;
+    animation-delay:200ms;
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 
-@keyframes throttle {
-    0% {
-        transform: rotate(-2deg);
-    }
-
-    20% {
-        transform: rotate(2deg);
-    }
-
-    40% {
-        transform: rotate(-2deg);
-    }
-
-    60% {
-        transform: rotate(2deg) scaleY(1.04);
-    }
-
-    80% {
-        transform: rotate(-2deg) scaleY(0.92);
-    }
-
-    100% {
-        transform: rotate(2deg);
-    }
+@keyframes throttle{
+    0%   {transform: rotate(-2deg);}
+    20%  {transform: rotate(2deg);}
+    40%  {transform: rotate(-2deg);}
+    60%  {transform: rotate(2deg) scaleY(1.04);}
+    80%  {transform: rotate(-2deg) scaleY(0.92);}
+    100% {transform: rotate(2deg);}
 }
 
 /* Pop up end */
@@ -2256,7 +2236,7 @@ li {
     transition: all 0.3s ease-in-out;
 }
 
-.box .img:hover img {
+.box .img:hover img{
     -webkit-filter: brightness(50%);
     transition: all 0.3s ease-in-out;
 }
